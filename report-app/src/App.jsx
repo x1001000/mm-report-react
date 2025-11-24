@@ -39,6 +39,15 @@ function App() {
     localStorage.setItem('language', language)
   }, [language])
 
+  useEffect(() => {
+    const titles = {
+      tc: 'MM獨家報告',
+      sc: 'MM独家报告',
+      en: 'MM Report'
+    }
+    document.title = titles[language]
+  }, [language])
+
   const t = translations[language]
 
   const tabs = [
